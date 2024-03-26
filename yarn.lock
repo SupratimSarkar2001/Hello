@@ -167,6 +167,13 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@liveblocks/client@1.11.0", "@liveblocks/client@^1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@liveblocks/client/-/client-1.11.0.tgz#18e86963a5c15c81b707d8df9afecab45a83ffbc"
+  integrity sha512-dZJM6rra/jBk7C++Cm7PX10TbwklkDv76LmMs8IZj8qkXrdG91ejT5PuLXXo3sDIMCdr2apbKyS6pdb8yw4DCA==
+  dependencies:
+    "@liveblocks/core" "1.11.0"
+
 "@liveblocks/core@1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@liveblocks/core/-/core-1.11.0.tgz#9b47ac6d61550a29c3f181eda4a350f03540f9e3"
@@ -181,6 +188,16 @@
     "@stablelib/base64" "^1.0.1"
     fast-sha256 "^1.3.0"
     node-fetch "^2.6.1"
+
+"@liveblocks/react@^1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@liveblocks/react/-/react-1.11.0.tgz#ab3ade20ed3a694b9a2dc89d6267a63fd080e741"
+  integrity sha512-ADBTXLDR34I2Pj8kvRTpuVkQLAf12Oqk/6zQJ3Qi5L4s9/JBzwUmmH5SqwwtXoxSJtLnIBhQaz62CB5tGrFomQ==
+  dependencies:
+    "@liveblocks/client" "1.11.0"
+    "@liveblocks/core" "1.11.0"
+    nanoid "^3"
+    use-sync-external-store "^1.2.0"
 
 "@mongodb-js/saslprep@^1.1.5":
   version "1.1.5"
@@ -1988,7 +2005,7 @@ mz@^2.7.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nanoid@^3.3.6, nanoid@^3.3.7:
+nanoid@^3, nanoid@^3.3.6, nanoid@^3.3.7:
   version "3.3.7"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
   integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
@@ -2909,6 +2926,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-sync-external-store@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 util-deprecate@^1.0.2:
   version "1.0.2"
