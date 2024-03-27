@@ -25,7 +25,7 @@ export default async function BoardPage(props : PageProps) {
  }
  return (
   <div> 
-   <h1>Board {boardInfo.metadata.boardName}</h1>
+   <h1 className="text-3xl my-3">Board {boardInfo.metadata.boardName}</h1>
    <Board id={boardId}/>
   </div>
   )

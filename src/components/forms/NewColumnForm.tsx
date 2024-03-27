@@ -1,14 +1,27 @@
 'use client'
+import { useMutation } from "@/app/liveblocks.config"
+import { LiveObject } from "@liveblocks/client";
 import { FormEvent } from "react"
+import uniqid from 'uniqid';
 
 export default function NewColumnForm() {
+ const addColumn = useMutation(({storage},columnName)=>{
+   return storage.get("columns").push(new LiveObject({
+    name: columnName,
+    id: uniqid.time(),
+    index:9999,
+   }));
+ },[]);
+
  const handleNewColumn = (event :FormEvent)=>{
   event.preventDefault()
 
   const input = (event.target as HTMLInputElement).querySelector('input');
 
   if(input){
-   alert(input.value)
+    const columnName = input.value
+    addColumn(columnName);
+    input.value = '' 
   }
   
  }
