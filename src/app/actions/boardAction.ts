@@ -50,3 +50,9 @@ export async function deleteBoard(boardId:string) {
  await liveblocksClient.deleteRoom(boardId);
  return true;
 }
+
+export async function updateBoard(boardId:string, updateData:any) {
+ const result = await liveblocksClient.updateRoom(boardId, updateData);
+ console.log({result});
+ return true;
+}
