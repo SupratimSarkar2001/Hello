@@ -6,7 +6,7 @@ import NewCardForm from "./forms/NewCardForm"
 import { FormEvent, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsis, faTrash } from "@fortawesome/free-solid-svg-icons"
-
+import {default as ColumnCard} from '@/components/Card';
 type ColumnProps = {
   id: string
   name: string
@@ -100,9 +100,7 @@ export default function Column({ id, name }: ColumnProps) {
           ghostClass="opacity-40"
         >
           {columnCards.map(card => (
-            <div key={card.id} className="border bg-white my-2 p-4 rounded-md">
-              <span>{card.name}</span>
-            </div>
+              <ColumnCard key={card.id} id={card.id} name={card.name} />
           ))}
         </ReactSortable>
       }
